@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="https://dashboard.piggyvest.com/register" class="app-icon icon-piggyvest-logo">
+                <span class="icon-text">GROUP 5</span>
+            </a>
+        </h1>
+    </header>
+    <main>
+        <div class="tab-header simple-interest">Simple Interest</div>
+        <div class="tab-header piggyvest-daily-interest" inactive-tab>Piggyvest Daily Interest</div>
+        <div class="clear-left"></div>
+        <section class="simple-interest tabs">
+            <h2>Simple Interest Calculator</h2>
+            <form class="simple-interest" action="#">
+                <div class="form-input-container">
+                    <p class="principal input-section">
+                        <label>
+                            <span>&#8358;</span>
+                            <input class="principal" type="number" min="0" placeholder="Principal" required>
+                        </label>
+                    </p>
+                    <p class="rate input-section">
+                        <label>
+                            <input class="rate" type="number" min="0" max="100" placeholder="Rate" required>
+                            <span>%</span>
+                        </label>
+                    </p>
+                    <p class="time input-section">
+                        <label>
+                            <input class="time" type="number" min="0" placeholder="Period" required>
+                            <span>years</span>
+                        </label>
+                    </p>
+                </div>
+                <p class="button-wrap">
+                    <button disabled class="simple-interest" type="button"
+                        onclick="simpleInterestResult()">Resolve</button>
+                </p>
+                <p class="result"></p>
+            </form>
+        </section>
+
+        <section class="piggyvest-daily-interest tabs" inactive-section>
+            <h2>Piggyvest Daily Interest Calculator</h2>
+            <form class="piggyvest-daily-interest" action="#">
+                <div class="form-input-container">
+                    <p class="principal input-section">
+                        <label>
+                            <span>&#8358;</span>
+                            <input type="number" min="0" class="principal"
+                                placeholder="Regular investment amount in Naira" required>
+                        </label>
+                    </p>
+                    <p class="interval input-section">
+                        <label>
+                            <input type="number" min="0" class="interval" placeholder="Interval" required>
+                            <span>days</span>
+                        </label>
+                    </p>
+                    <p class="period input-section">
+                        <label>
+                            <input type="number" min="0" class="period" placeholder="Period" required>
+                            <span>days</span>
+                        </label>
+                    </p>
+                </div>
+                <p class="button-wrap">
+                    <button class="piggyvest-daily-interest" type="button" disabled
+                        onclick="piggyvestDailyInterestResult()">Resolve</button>
+                </p>
+                <p class="result"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <a href="https://github.com/Tboy-AK"> Akanji Oluwatobiloba</a>, Prosper Nnadi</p>
+    </footer>
+    <script src="simple-interest.js"></script>
+    <script src="piggyvest-daily-interest.js"></script>
+    <script src="tab-header.js"></script>
+</body>
+
+</html>
